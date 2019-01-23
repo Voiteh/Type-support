@@ -1,10 +1,12 @@
 shared interface Other {}
 shared interface I {}
 shared interface IA satisfies I {}
-shared interface IB satisfies I {}
-shared interface IC satisfies I {}
-shared class A() satisfies IA & Other {}
+shared interface IC {}
+shared class A() satisfies IA {}
 
-shared class B() extends A() satisfies IB & Other {}
+shared class B() extends A()  {}
 
 shared class C() extends B() satisfies IC & Other {}
+
+
+shared class D() satisfies IA{}

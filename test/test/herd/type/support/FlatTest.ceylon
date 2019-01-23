@@ -1,7 +1,0 @@
-shared class FlatTest() {
-	
-	
-	
-	
-	
-}
