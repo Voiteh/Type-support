@@ -28,7 +28,7 @@ shared object flat{
 			}
 		}
 		else {
-			throw Exception("Unhandled type ``type``");
+			result={type};
 		}
 		return result.distinct;
 	}
