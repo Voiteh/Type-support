@@ -16,6 +16,22 @@ import test.herd.type.support.model {
 
 shared class FlatTest() {
 	
+	shared test void docsTypeFlatTest(){
+		
+		value stringflatHierarchy = flat.types(`String`);
+		assert(stringflatHierarchy.containsEvery([`SearchableList<Character>`,`List<Character>`,`Comparable<String>`,`Object`]));
+		
+	}
+	
+	shared test void docsDeclarationFlatTest(){
+		
+		value stringflatHierarchy = flat.declarations(`class String`);
+		assert(stringflatHierarchy.containsEvery([`interface SearchableList`,`interface List`,`interface Comparable`,`class Object`]));
+		
+	}
+	
+	
+	
 	shared test
 	void shouldContainParentInInterface() {
 		value types = flat.types(`IA`);
