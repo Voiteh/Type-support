@@ -1,7 +1,6 @@
 import test.herd.type.support.model {
 	I,
 	B,
-	D,
 	IA,
 	A,
 	C
@@ -13,8 +12,6 @@ import ceylon.test {
 	test
 }
 shared class DeclarationFlatTest() {
-	
-	
 	
 	shared test
 	void shouldContainParentInInterface() {

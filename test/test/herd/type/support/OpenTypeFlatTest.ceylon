@@ -17,28 +17,28 @@ import ceylon.test {
 shared class OpenTypeFlatTest() {
 	shared test
 	void shouldContainParentInInterface() {
-		value declarations = flat.openTypes(`interface IA`.openType);
-		assert (declarations.contains(`interface IA`.openType));
-		assert (declarations.contains(`interface I`.openType));
+		value openTypes = flat.openTypes(`interface IA`.openType);
+		assert (openTypes.contains(`interface IA`.openType));
+		assert (openTypes.contains(`interface I`.openType));
 	}
 	shared test
 	void shouldContainInterfacesInClass() {
-		value declarations = flat.openTypes(`class A`.openType);
-		assert (declarations.contains(`interface IA`.openType));
-		assert (declarations.contains(`interface I`.openType));
+		value openTypes = flat.openTypes(`class A`.openType);
+		assert (openTypes.contains(`interface IA`.openType));
+		assert (openTypes.contains(`interface I`.openType));
 	}
 	
 	shared test
 	void shouldContainInterfacesFromParentClass() {
-		value declarations = flat.openTypes(`class C`.openType);
-		assert (declarations.contains(`interface IA`.openType));
-		assert (declarations.contains(`interface I`.openType));
+		value openTypes = flat.openTypes(`class C`.openType);
+		assert (openTypes.contains(`interface IA`.openType));
+		assert (openTypes.contains(`interface I`.openType));
 	}
 	
 	shared test
 	void shouldContainParentClasses() {
-		value declarations = flat.openTypes(`class C`.openType);
-		assert (declarations.contains(`class A`.openType));
-		assert (declarations.contains(`class B`.openType));
+		value openTypes = flat.openTypes(`class C`.openType);
+		assert (openTypes.contains(`class A`.openType));
+		assert (openTypes.contains(`class B`.openType));
 	}
 }
