@@ -10,4 +10,4 @@
 "
 license ("http://www.apache.org/licenses/LICENSE-2.0.html")
 by("Wojciech Potiopa")
-module herd.type.support "0.1.0" {}
+module herd.type.support "0.2.0" {}
