@@ -1,0 +1,5 @@
+
+[compiler]
+source=test
+source=source
+resource=resource
